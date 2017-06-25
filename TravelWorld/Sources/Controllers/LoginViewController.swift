@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class LoginViewController: BaseViewController {
 
@@ -22,6 +23,7 @@ class LoginViewController: BaseViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -30,6 +32,7 @@ class LoginViewController: BaseViewController {
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -46,27 +49,38 @@ class LoginViewController: BaseViewController {
     // MARK: - Setup View
 
     // MARK: - Call Api
+    private func loginFirebase() {
+
+        Auth.auth().signIn(withEmail: "ltranframgia@gmail.com", password: "12345678") { (user, _) in
+            if user != nil {
+                Auth.auth().currentUser?.getIDTokenForcingRefresh(true, completion: { (idToken, _ ) in
+
+                    logD("token: \(String(describing: idToken)) - refreshToken:  \(String(describing: Auth.auth().currentUser?.refreshToken))")
+
+                    // main app
+                    self.gotoMainApp()
+                })
+
+            }
+
+        }
+    }
 
     // MARK: - Actions
     @IBAction func actionTouchBtnLogin(_ sender: Any) {
-        self.mainTabBarViewController?.setupMainApp()
-        self.dismiss(animated: true, completion: nil)
+        self.loginFirebase()
     }
 
     override func actionTouchBtnRight() {
         let userSettingVC = LoginViewController.getViewControllerFromStoryboard(Storyboard.User.name)
         let navigationVC = UINavigationController(rootViewController: userSettingVC)
-
-        // create animator for present
-        //        let animator = Animator(presentedType: .push, dismissedType: .push)
-        //        self.menuViewController?.animator = animator
-        //
-        //        navigationVC.transitioningDelegate = self.menuViewController
-
         // present
         self.present(navigationVC, animated: true, completion: nil)
     }
 
     // MARK: - Functions
-
+    private func gotoMainApp() {
+        self.mainViewController?.setupMainApp()
+        self.mainViewController?.dismiss(animated: true, completion: nil)
+    }
 }

@@ -5,7 +5,7 @@ class BaseViewController: UIViewController, UIGestureRecognizerDelegate {
     // MARK: - IBOutlet
 
     // MARK: - Varialbes
-    lazy var mainTabBarViewController: MainTabBarController? = {
+    lazy var mainViewController: MainTabBarController? = {
         if let _tabBarController = self.tabBarController as? MainTabBarController {
             return _tabBarController
         }

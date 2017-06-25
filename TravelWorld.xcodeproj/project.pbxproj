@@ -166,10 +166,8 @@
 		8272E3641F000E2600EB1170 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				8272E3651F000E2600EB1170 /* BaseViewController.swift */,
-				8272E3661F000E2600EB1170 /* LoginViewController.swift */,
-				8272E3671F000E2600EB1170 /* MainTabBarController.swift */,
-				8272E3681F000E2600EB1170 /* StartViewController.swift */,
+				8272E3BC1F00125C00EB1170 /* Main */,
+				8272E3BD1F00126600EB1170 /* User */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -260,9 +258,9 @@
 		8272E38A1F000E2600EB1170 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				8272E38D1F000E2600EB1170 /* OAuthHandler.swift */,
 				8272E38B1F000E2600EB1170 /* ApiClient.swift */,
 				8272E38C1F000E2600EB1170 /* AppRouter.swift */,
-				8272E38D1F000E2600EB1170 /* OAuthHandler.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -285,6 +283,24 @@
 				8272E3951F000E2600EB1170 /* User.storyboard */,
 			);
 			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		8272E3BC1F00125C00EB1170 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				8272E3651F000E2600EB1170 /* BaseViewController.swift */,
+				8272E3671F000E2600EB1170 /* MainTabBarController.swift */,
+				8272E3681F000E2600EB1170 /* StartViewController.swift */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		8272E3BD1F00126600EB1170 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				8272E3661F000E2600EB1170 /* LoginViewController.swift */,
+			);
+			name = User;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

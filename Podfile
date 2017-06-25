@@ -9,5 +9,8 @@ target 'TravelWorld' do
   pod 'Alamofire'
   pod 'SwiftyJSON'
   pod 'RealmSwift'
+
+  # Firebase
   pod 'Firebase/Core'
+  pod 'Firebase/Auth'
 end

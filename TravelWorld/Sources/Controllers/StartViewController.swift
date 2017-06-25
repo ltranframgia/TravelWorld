@@ -1,4 +1,5 @@
 import UIKit
+import FirebaseAuth
 
 class StartViewController: BaseViewController {
 
@@ -46,11 +47,19 @@ class StartViewController: BaseViewController {
     // MARK: - Functions
     private func checkApp() {
 
-        // User module (login, register, ...)
-        self.perform(#selector(StartViewController.gotoUser), with: nil, afterDelay: 1)
+        let handle: AuthStateDidChangeListenerHandle? = Auth.auth().addStateDidChangeListener { (_, user) in
 
-        // Main app
-        // self.perform(#selector(StartViewController.gotoMainApp), with: nil, afterDelay: 1)
+            if user != nil {
+
+                // Main app
+                self.perform(#selector(StartViewController.gotoMainApp), with: nil, afterDelay: 1)
+            } else {
+                // User module (login, register, ...)
+                self.perform(#selector(StartViewController.gotoUser), with: nil, afterDelay: 1)
+            }
+        }
+
+        Auth.auth().removeStateDidChangeListener(handle!)
     }
 
     func gotoUser() {
@@ -68,6 +77,6 @@ class StartViewController: BaseViewController {
     }
 
     func gotoMainApp() {
-        self.mainTabBarViewController?.setupMainApp()
+        self.mainViewController?.setupMainApp()
     }
 }
