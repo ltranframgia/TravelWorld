@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>231022516733-lgipccck2mopqpi77rjcprp4s08q95aj.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.231022516733-lgipccck2mopqpi77rjcprp4s08q95aj</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDYHRhPOhV404TZ_bMNW0iuoU6s6ZsI_20</string>
+	<key>GCM_SENDER_ID</key>
+	<string>231022516733</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>vn.thl.travelworld</string>
+	<key>PROJECT_ID</key>
+	<string>travelworld-5d555</string>
+	<key>STORAGE_BUCKET</key>
+	<string>travelworld-5d555.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:231022516733:ios:a6880002553a67b9</string>
+	<key>DATABASE_URL</key>
+	<string>https://travelworld-5d555.firebaseio.com</string>
+</dict>
+</plist>
