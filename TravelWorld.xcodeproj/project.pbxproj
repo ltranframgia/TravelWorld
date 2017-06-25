@@ -300,6 +300,7 @@
 				8272E34B1F000D3900EB1170 /* Resources */,
 				F337519ABB3A963B405F53FF /* [CP] Embed Pods Frameworks */,
 				442A646D490787C93A9F117A /* [CP] Copy Pods Resources */,
+				8272E3BB1F000F6A00EB1170 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -377,6 +378,20 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TravelWorld/Pods-TravelWorld-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		8272E3BB1F000F6A00EB1170 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
 		8FD569B43D40BD83DC41B7CB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
