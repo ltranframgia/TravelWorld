@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="O5l-kg-tKC" userLabel="LoginFormView" customClass="LoginFormView" customModule="TravelWorld" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="144"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cBG-ET-Fdg" userLabel="Input form">
+                    <rect key="frame" x="-0.5" y="-0.5" width="375.5" height="92.5"/>
+                    <subviews>
+                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rhU-TS-t8e" userLabel="Username" customClass="BorderView" customModule="TravelWorld" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="375.5" height="40"/>
+                            <subviews>
+                                <view alpha="0.15000000596046448" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yNc-MF-veL" userLabel="bg">
+                                    <rect key="frame" x="0.0" y="0.0" width="375.5" height="40"/>
+                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </view>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gro-5v-Eex">
+                                    <rect key="frame" x="11.5" y="-0.5" width="351.5" height="40"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="15"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                            <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </textField>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="gro-5v-Eex" secondAttribute="trailing" constant="12" id="7oj-l4-mRQ"/>
+                                <constraint firstAttribute="trailing" secondItem="yNc-MF-veL" secondAttribute="trailing" id="8Lb-1Q-EQX"/>
+                                <constraint firstItem="yNc-MF-veL" firstAttribute="top" secondItem="rhU-TS-t8e" secondAttribute="top" id="FPj-Ph-adl"/>
+                                <constraint firstItem="gro-5v-Eex" firstAttribute="top" secondItem="rhU-TS-t8e" secondAttribute="top" id="IRI-pS-ilR"/>
+                                <constraint firstAttribute="bottom" secondItem="gro-5v-Eex" secondAttribute="bottom" id="N4E-OS-3Xh"/>
+                                <constraint firstItem="gro-5v-Eex" firstAttribute="leading" secondItem="rhU-TS-t8e" secondAttribute="leading" constant="12" id="Nrn-nY-gUa"/>
+                                <constraint firstAttribute="height" constant="40" id="QAf-Xc-P1y"/>
+                                <constraint firstAttribute="bottom" secondItem="yNc-MF-veL" secondAttribute="bottom" id="aOd-bW-wXx"/>
+                                <constraint firstItem="yNc-MF-veL" firstAttribute="leading" secondItem="rhU-TS-t8e" secondAttribute="leading" id="lV4-y5-31B"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="2"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wYX-zf-C2n" userLabel="Password" customClass="BorderView" customModule="TravelWorld" customModuleProvider="target">
+                            <rect key="frame" x="-0.5" y="52" width="375.5" height="40"/>
+                            <subviews>
+                                <view alpha="0.10000000149011612" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WQ2-ma-FqC" userLabel="bg">
+                                    <rect key="frame" x="0.0" y="0.0" width="375.5" height="40"/>
+                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </view>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zOS-Nv-4xh">
+                                    <rect key="frame" x="11.5" y="-0.5" width="351.5" height="40"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="15"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                            <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </textField>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="WQ2-ma-FqC" firstAttribute="leading" secondItem="wYX-zf-C2n" secondAttribute="leading" id="9JV-Uj-ZLg"/>
+                                <constraint firstAttribute="bottom" secondItem="WQ2-ma-FqC" secondAttribute="bottom" id="ARI-sB-P2I"/>
+                                <constraint firstAttribute="trailing" secondItem="zOS-Nv-4xh" secondAttribute="trailing" constant="12" id="DV5-Ch-BbB"/>
+                                <constraint firstAttribute="height" constant="40" id="Dx8-fM-1cd"/>
+                                <constraint firstAttribute="bottom" secondItem="zOS-Nv-4xh" secondAttribute="bottom" id="M4c-hg-jne"/>
+                                <constraint firstItem="WQ2-ma-FqC" firstAttribute="top" secondItem="wYX-zf-C2n" secondAttribute="top" id="MG0-jD-iQn"/>
+                                <constraint firstAttribute="trailing" secondItem="WQ2-ma-FqC" secondAttribute="trailing" id="TqR-vl-ndl"/>
+                                <constraint firstItem="zOS-Nv-4xh" firstAttribute="top" secondItem="wYX-zf-C2n" secondAttribute="top" id="d5r-kP-pFs"/>
+                                <constraint firstItem="zOS-Nv-4xh" firstAttribute="leading" secondItem="wYX-zf-C2n" secondAttribute="leading" constant="12" id="njI-3c-Zqj"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="2"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="wYX-zf-C2n" firstAttribute="leading" secondItem="cBG-ET-Fdg" secondAttribute="leading" id="9RP-FQ-ZMK"/>
+                        <constraint firstItem="rhU-TS-t8e" firstAttribute="top" secondItem="cBG-ET-Fdg" secondAttribute="top" id="DMy-pq-20f"/>
+                        <constraint firstAttribute="bottom" secondItem="wYX-zf-C2n" secondAttribute="bottom" id="Ffw-Vp-sh8"/>
+                        <constraint firstItem="rhU-TS-t8e" firstAttribute="leading" secondItem="cBG-ET-Fdg" secondAttribute="leading" id="V9b-ft-Ys1"/>
+                        <constraint firstAttribute="trailing" secondItem="rhU-TS-t8e" secondAttribute="trailing" id="dLl-WE-fWd"/>
+                        <constraint firstItem="wYX-zf-C2n" firstAttribute="top" secondItem="rhU-TS-t8e" secondAttribute="bottom" constant="12" id="f3m-Db-xUz"/>
+                        <constraint firstAttribute="trailing" secondItem="wYX-zf-C2n" secondAttribute="trailing" id="v8A-7h-nUF"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jGu-bb-R6h" customClass="BorderButton" customModule="TravelWorld" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="104" width="375" height="40"/>
+                    <color key="backgroundColor" red="0.33333333329999998" green="0.58823529409999997" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="feK-18-2ci"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="18"/>
+                    <state key="normal" title="Login">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="jGu-bb-R6h" firstAttribute="leading" secondItem="O5l-kg-tKC" secondAttribute="leading" id="78y-gN-r7L"/>
+                <constraint firstItem="cBG-ET-Fdg" firstAttribute="top" secondItem="O5l-kg-tKC" secondAttribute="top" id="ADy-Iq-t8n"/>
+                <constraint firstAttribute="trailing" secondItem="jGu-bb-R6h" secondAttribute="trailing" id="CMU-dS-OJz"/>
+                <constraint firstAttribute="bottom" secondItem="jGu-bb-R6h" secondAttribute="bottom" id="MO8-Cy-F1q"/>
+                <constraint firstItem="cBG-ET-Fdg" firstAttribute="leading" secondItem="O5l-kg-tKC" secondAttribute="leading" id="eJq-Fs-KUY"/>
+                <constraint firstAttribute="trailing" secondItem="cBG-ET-Fdg" secondAttribute="trailing" id="mfU-ih-xeT"/>
+                <constraint firstItem="jGu-bb-R6h" firstAttribute="top" secondItem="cBG-ET-Fdg" secondAttribute="bottom" constant="12" id="ot9-i9-owV"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="btnLogin" destination="jGu-bb-R6h" id="3Qd-7v-edP"/>
+            </connections>
+        </view>
+    </objects>
+</document>

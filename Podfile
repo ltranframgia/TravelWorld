@@ -9,6 +9,8 @@ target 'TravelWorld' do
   pod 'Alamofire'
   pod 'SwiftyJSON'
   pod 'RealmSwift'
+  pod 'TPKeyboardAvoiding'
+  pod 'SnapKit'
 
   # Firebase
   pod 'Firebase/Core'

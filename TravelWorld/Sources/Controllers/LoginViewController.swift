@@ -7,11 +7,14 @@
 //
 
 import UIKit
+
 import FirebaseAuth
 
 class LoginViewController: BaseViewController {
 
     // MARK: - IBOutlet
+    @IBOutlet private weak var contentView: UIView!
+    lazy private var loginFormView: LoginFormView? = LoginFormView.fromNib()
 
     // MARK: - Varialbes
 
@@ -28,6 +31,8 @@ class LoginViewController: BaseViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        self.addLoginFormView()
+
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -47,6 +52,12 @@ class LoginViewController: BaseViewController {
     }
 
     // MARK: - Setup View
+    private func addLoginFormView() {
+
+        if let loginFormView = self.loginFormView {
+            loginFormView.addToViewWithAnimation(superView: self.contentView, animate: true, action: #selector(LoginViewController.actionTouchBtnLogin(_:)))
+        }
+    }
 
     // MARK: - Call Api
     private func loginFirebase() {
@@ -68,7 +79,17 @@ class LoginViewController: BaseViewController {
 
     // MARK: - Actions
     @IBAction func actionTouchBtnLogin(_ sender: Any) {
-        self.loginFirebase()
+        self.view.endEditing(true)
+
+        if let loginFormView = self.loginFormView {
+            loginFormView.hideWithAnimation(animate: true, completion: { (_) in
+                let indicatorView = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.white)
+                indicatorView.center = self.view.center
+                indicatorView.startAnimating()
+                self.view.addSubview(indicatorView)
+                // self.loginFirebase()
+            })
+        }
     }
 
     override func actionTouchBtnRight() {

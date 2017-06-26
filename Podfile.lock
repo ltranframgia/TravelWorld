@@ -34,14 +34,18 @@ PODS:
   - Realm/Headers (2.8.1)
   - RealmSwift (2.8.1):
     - Realm (= 2.8.1)
+  - SnapKit (3.2.0)
   - SwiftyJSON (3.1.4)
+  - TPKeyboardAvoiding (1.3.1)
 
 DEPENDENCIES:
   - Alamofire
   - Firebase/Auth
   - Firebase/Core
   - RealmSwift
+  - SnapKit
   - SwiftyJSON
+  - TPKeyboardAvoiding
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
@@ -54,8 +58,10 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: 30d874b96d0d76028f61fbd122801e3f030d47db
   Realm: 2627602ad6818451f0cb8c2a6e072f7f10a5f360
   RealmSwift: 4764ca7657f2193c256fb032c0b123926f70dbcd
+  SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+  TPKeyboardAvoiding: 0d6af20e95e2850f4c621841225b59ec7d8dd852
 
-PODFILE CHECKSUM: 4ec4b43069210a3188bb67770e4b14cbc5ac5386
+PODFILE CHECKSUM: dd8dc2527c73a294c68c1245f4e27e93bcf6b300
 
 COCOAPODS: 1.2.1

@@ -44,6 +44,9 @@
 		8272E3BE1F00A4BA00EB1170 /* Message.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8272E3C01F00A4BA00EB1170 /* Message.storyboard */; };
 		8272E3C11F00A4BD00EB1170 /* Timeline.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8272E3C31F00A4BD00EB1170 /* Timeline.storyboard */; };
 		8272E3C41F00A4C100EB1170 /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8272E3C61F00A4C100EB1170 /* User.storyboard */; };
+		8299AD9D1F00BC0B009D7FE7 /* CTView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8299AD9C1F00BC0B009D7FE7 /* CTView.swift */; };
+		8299ADA21F00DCA6009D7FE7 /* LoginFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8299ADA11F00DCA6009D7FE7 /* LoginFormView.swift */; };
+		8299ADA31F00DCD2009D7FE7 /* LoginFormView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8299ADA51F00DCD2009D7FE7 /* LoginFormView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +91,9 @@
 		8272E3BF1F00A4BA00EB1170 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Message.storyboard; sourceTree = "<group>"; };
 		8272E3C21F00A4BD00EB1170 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Timeline.storyboard; sourceTree = "<group>"; };
 		8272E3C51F00A4C100EB1170 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/User.storyboard; sourceTree = "<group>"; };
+		8299AD9C1F00BC0B009D7FE7 /* CTView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTView.swift; sourceTree = "<group>"; };
+		8299ADA11F00DCA6009D7FE7 /* LoginFormView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginFormView.swift; sourceTree = "<group>"; };
+		8299ADA41F00DCD2009D7FE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LoginFormView.xib; sourceTree = "<group>"; };
 		F1D478B4FCDD08DD37C262AD /* Pods-TravelWorld.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelWorld.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TravelWorld/Pods-TravelWorld.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -269,6 +275,7 @@
 			isa = PBXGroup;
 			children = (
 				8272E3BA1F000EA400EB1170 /* Storyboards */,
+				8299AD9E1F00BC12009D7FE7 /* CustomViews */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -301,6 +308,16 @@
 				8272E3661F000E2600EB1170 /* LoginViewController.swift */,
 			);
 			name = User;
+			sourceTree = "<group>";
+		};
+		8299AD9E1F00BC12009D7FE7 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				8299AD9C1F00BC0B009D7FE7 /* CTView.swift */,
+				8299ADA51F00DCD2009D7FE7 /* LoginFormView.xib */,
+				8299ADA11F00DCA6009D7FE7 /* LoginFormView.swift */,
+			);
+			name = CustomViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -372,6 +389,7 @@
 				8272E3B01F000E2600EB1170 /* Localizable.strings in Resources */,
 				8272E3BE1F00A4BA00EB1170 /* Message.storyboard in Resources */,
 				8272E3C41F00A4C100EB1170 /* User.storyboard in Resources */,
+				8299ADA31F00DCD2009D7FE7 /* LoginFormView.xib in Resources */,
 				8272E3B11F000E2600EB1170 /* GoogleService-Info.plist in Resources */,
 				8272E3C11F00A4BD00EB1170 /* Timeline.storyboard in Resources */,
 			);
@@ -447,6 +465,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8272E3AE1F000E2600EB1170 /* RUser.swift in Sources */,
+				8299AD9D1F00BC0B009D7FE7 /* CTView.swift in Sources */,
+				8299ADA21F00DCA6009D7FE7 /* LoginFormView.swift in Sources */,
 				8272E39A1F000E2600EB1170 /* StartViewController.swift in Sources */,
 				8272E3AC1F000E2600EB1170 /* TransitionManager.swift in Sources */,
 				8272E3A31F000E2600EB1170 /* ViewDefine.swift in Sources */,
@@ -526,6 +546,14 @@
 				8272E3C51F00A4C100EB1170 /* Base */,
 			);
 			name = User.storyboard;
+			sourceTree = "<group>";
+		};
+		8299ADA51F00DCD2009D7FE7 /* LoginFormView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8299ADA41F00DCD2009D7FE7 /* Base */,
+			);
+			name = LoginFormView.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

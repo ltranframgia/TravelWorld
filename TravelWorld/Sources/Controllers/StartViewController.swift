@@ -50,7 +50,6 @@ class StartViewController: BaseViewController {
         let handle: AuthStateDidChangeListenerHandle? = Auth.auth().addStateDidChangeListener { (_, user) in
 
             if user != nil {
-
                 // Main app
                 self.perform(#selector(StartViewController.gotoMainApp), with: nil, afterDelay: 1)
             } else {
@@ -65,7 +64,7 @@ class StartViewController: BaseViewController {
     func gotoUser() {
         let userSettingVC = LoginViewController.getViewControllerFromStoryboard(Storyboard.User.name)
         let navigationVC = UINavigationController(rootViewController: userSettingVC)
-
+        navigationVC.navigationBar.isHidden = true
         // create animator for present
         //        let animator = Animator(presentedType: .push, dismissedType: .push)
         //        self.menuViewController?.animator = animator
@@ -73,7 +72,7 @@ class StartViewController: BaseViewController {
         //        navigationVC.transitioningDelegate = self.menuViewController
 
         // present
-        self.present(navigationVC, animated: true, completion: nil)
+        self.present(navigationVC, animated: false, completion: nil)
     }
 
     func gotoMainApp() {
