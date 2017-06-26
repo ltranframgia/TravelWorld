@@ -71,6 +71,11 @@ class OAuthHandler: RequestAdapter, RequestRetrier {
     }()
 
     // MARK: - Initialization
+    init(accessToken: String?, refreshToken: String? ) {
+        self.accessToken = accessToken
+        self.refreshToken = refreshToken
+    }
+
     init(baseUrl: String?) {
         self.baseUrl = baseUrl
     }

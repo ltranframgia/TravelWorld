@@ -41,9 +41,9 @@
 		8272E3B41F000E2600EB1170 /* OAuthHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8272E38D1F000E2600EB1170 /* OAuthHandler.swift */; };
 		8272E3B51F000E2600EB1170 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8272E38F1F000E2600EB1170 /* LaunchScreen.storyboard */; };
 		8272E3B61F000E2600EB1170 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8272E3911F000E2600EB1170 /* Main.storyboard */; };
-		8272E3B71F000E2600EB1170 /* Message.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8272E3931F000E2600EB1170 /* Message.storyboard */; };
-		8272E3B81F000E2600EB1170 /* Timeline.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8272E3941F000E2600EB1170 /* Timeline.storyboard */; };
-		8272E3B91F000E2600EB1170 /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8272E3951F000E2600EB1170 /* User.storyboard */; };
+		8272E3BE1F00A4BA00EB1170 /* Message.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8272E3C01F00A4BA00EB1170 /* Message.storyboard */; };
+		8272E3C11F00A4BD00EB1170 /* Timeline.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8272E3C31F00A4BD00EB1170 /* Timeline.storyboard */; };
+		8272E3C41F00A4C100EB1170 /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8272E3C61F00A4C100EB1170 /* User.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,9 +85,9 @@
 		8272E38D1F000E2600EB1170 /* OAuthHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthHandler.swift; sourceTree = "<group>"; };
 		8272E3901F000E2600EB1170 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8272E3921F000E2600EB1170 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8272E3931F000E2600EB1170 /* Message.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Message.storyboard; sourceTree = "<group>"; };
-		8272E3941F000E2600EB1170 /* Timeline.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Timeline.storyboard; sourceTree = "<group>"; };
-		8272E3951F000E2600EB1170 /* User.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
+		8272E3BF1F00A4BA00EB1170 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Message.storyboard; sourceTree = "<group>"; };
+		8272E3C21F00A4BD00EB1170 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Timeline.storyboard; sourceTree = "<group>"; };
+		8272E3C51F00A4C100EB1170 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/User.storyboard; sourceTree = "<group>"; };
 		F1D478B4FCDD08DD37C262AD /* Pods-TravelWorld.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelWorld.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TravelWorld/Pods-TravelWorld.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -141,8 +141,8 @@
 		8272E34F1F000D3900EB1170 /* TravelWorld */ = {
 			isa = PBXGroup;
 			children = (
-				8272E3621F000E2600EB1170 /* Sources */,
 				8272E35C1F000D3900EB1170 /* Info.plist */,
+				8272E3621F000E2600EB1170 /* Sources */,
 			);
 			path = TravelWorld;
 			sourceTree = "<group>";
@@ -278,9 +278,9 @@
 			children = (
 				8272E38F1F000E2600EB1170 /* LaunchScreen.storyboard */,
 				8272E3911F000E2600EB1170 /* Main.storyboard */,
-				8272E3931F000E2600EB1170 /* Message.storyboard */,
-				8272E3941F000E2600EB1170 /* Timeline.storyboard */,
-				8272E3951F000E2600EB1170 /* User.storyboard */,
+				8272E3C01F00A4BA00EB1170 /* Message.storyboard */,
+				8272E3C31F00A4BD00EB1170 /* Timeline.storyboard */,
+				8272E3C61F00A4C100EB1170 /* User.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -370,10 +370,10 @@
 				8272E3B61F000E2600EB1170 /* Main.storyboard in Resources */,
 				8272E3B51F000E2600EB1170 /* LaunchScreen.storyboard in Resources */,
 				8272E3B01F000E2600EB1170 /* Localizable.strings in Resources */,
-				8272E3B71F000E2600EB1170 /* Message.storyboard in Resources */,
-				8272E3B91F000E2600EB1170 /* User.storyboard in Resources */,
+				8272E3BE1F00A4BA00EB1170 /* Message.storyboard in Resources */,
+				8272E3C41F00A4C100EB1170 /* User.storyboard in Resources */,
 				8272E3B11F000E2600EB1170 /* GoogleService-Info.plist in Resources */,
-				8272E3B81F000E2600EB1170 /* Timeline.storyboard in Resources */,
+				8272E3C11F00A4BD00EB1170 /* Timeline.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,6 +502,30 @@
 				8272E3921F000E2600EB1170 /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8272E3C01F00A4BA00EB1170 /* Message.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8272E3BF1F00A4BA00EB1170 /* Base */,
+			);
+			name = Message.storyboard;
+			sourceTree = "<group>";
+		};
+		8272E3C31F00A4BD00EB1170 /* Timeline.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8272E3C21F00A4BD00EB1170 /* Base */,
+			);
+			name = Timeline.storyboard;
+			sourceTree = "<group>";
+		};
+		8272E3C61F00A4C100EB1170 /* User.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8272E3C51F00A4C100EB1170 /* Base */,
+			);
+			name = User.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
