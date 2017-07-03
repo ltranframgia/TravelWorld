@@ -22,6 +22,7 @@ class LoginFormView: UIView {
 
     // MARK: - Function
     func addToViewWithAnimation(superView: UIView?, animate: Bool = false, action: Selector? = nil) {
+        self.removeFromSuperview()
         guard let _superView = superView else { return  }
         _superView.addSubview(self)
         self.snp.makeConstraints { (make) -> Void in

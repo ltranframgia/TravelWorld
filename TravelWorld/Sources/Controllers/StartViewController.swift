@@ -20,7 +20,7 @@ class StartViewController: BaseViewController {
         super.viewDidAppear(animated)
 
         // check app
-        self.checkApp()
+        self.doGetAppInfo()
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -43,6 +43,15 @@ class StartViewController: BaseViewController {
     // MARK: - Actions
 
     // MARK: - Call Api
+    private func doGetAppInfo() {
+
+        _ = ApiClient.request(urlRequest: AppRouter.getAppInfo) { [weak self] (responseObject) in
+
+            if responseObject?.result == .success {
+                self?.checkApp()
+            }
+        }
+    }
 
     // MARK: - Functions
     private func checkApp() {

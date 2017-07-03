@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		59871861E62EACACF87A00D0 /* Pods_TravelWorld.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D4C7CD9473DBBBE88E4CDB5 /* Pods_TravelWorld.framework */; };
+		823BD8F61F093B1900B147E3 /* TLCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823BD8F51F093B1900B147E3 /* TLCollectionView.swift */; };
+		823BD8F81F093B4A00B147E3 /* TLViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823BD8F71F093B4A00B147E3 /* TLViews.swift */; };
 		8272E3961F000E2600EB1170 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8272E3631F000E2600EB1170 /* AppDelegate.swift */; };
 		8272E3971F000E2600EB1170 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8272E3651F000E2600EB1170 /* BaseViewController.swift */; };
 		8272E3981F000E2600EB1170 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8272E3661F000E2600EB1170 /* LoginViewController.swift */; };
@@ -47,11 +49,18 @@
 		8299AD9D1F00BC0B009D7FE7 /* CTView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8299AD9C1F00BC0B009D7FE7 /* CTView.swift */; };
 		8299ADA21F00DCA6009D7FE7 /* LoginFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8299ADA11F00DCA6009D7FE7 /* LoginFormView.swift */; };
 		8299ADA31F00DCD2009D7FE7 /* LoginFormView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8299ADA51F00DCD2009D7FE7 /* LoginFormView.xib */; };
+		82AA34361F0AA4250020F076 /* Font+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AA34351F0AA4250020F076 /* Font+Ext.swift */; };
+		82AA34381F0AB40A0020F076 /* TLInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AA34371F0AB40A0020F076 /* TLInfoView.swift */; };
+		82C989E91F06B80A0057D57D /* UICollectionView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C989E81F06B80A0057D57D /* UICollectionView+Ext.swift */; };
+		82D6389E1F0D2C11008E056E /* TimelineRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D6389D1F0D2C11008E056E /* TimelineRouter.swift */; };
+		82FE336F1F06AF230081B5A0 /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FE336E1F06AF230081B5A0 /* TimelineViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3D4C7CD9473DBBBE88E4CDB5 /* Pods_TravelWorld.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TravelWorld.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52E096099ACAF9A802D5B655 /* Pods-TravelWorld.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelWorld.release.xcconfig"; path = "Pods/Target Support Files/Pods-TravelWorld/Pods-TravelWorld.release.xcconfig"; sourceTree = "<group>"; };
+		823BD8F51F093B1900B147E3 /* TLCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLCollectionView.swift; sourceTree = "<group>"; };
+		823BD8F71F093B4A00B147E3 /* TLViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLViews.swift; sourceTree = "<group>"; };
 		8272E34D1F000D3900EB1170 /* TravelWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8272E35C1F000D3900EB1170 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8272E3631F000E2600EB1170 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +103,11 @@
 		8299AD9C1F00BC0B009D7FE7 /* CTView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTView.swift; sourceTree = "<group>"; };
 		8299ADA11F00DCA6009D7FE7 /* LoginFormView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginFormView.swift; sourceTree = "<group>"; };
 		8299ADA41F00DCD2009D7FE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LoginFormView.xib; sourceTree = "<group>"; };
+		82AA34351F0AA4250020F076 /* Font+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Font+Ext.swift"; sourceTree = "<group>"; };
+		82AA34371F0AB40A0020F076 /* TLInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLInfoView.swift; sourceTree = "<group>"; };
+		82C989E81F06B80A0057D57D /* UICollectionView+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Ext.swift"; sourceTree = "<group>"; };
+		82D6389D1F0D2C11008E056E /* TimelineRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineRouter.swift; sourceTree = "<group>"; };
+		82FE336E1F06AF230081B5A0 /* TimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
 		F1D478B4FCDD08DD37C262AD /* Pods-TravelWorld.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelWorld.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TravelWorld/Pods-TravelWorld.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -124,6 +138,16 @@
 				3D4C7CD9473DBBBE88E4CDB5 /* Pods_TravelWorld.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		823BD8F41F093AF800B147E3 /* TLCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				823BD8F51F093B1900B147E3 /* TLCollectionView.swift */,
+				82AA34371F0AB40A0020F076 /* TLInfoView.swift */,
+				823BD8F71F093B4A00B147E3 /* TLViews.swift */,
+			);
+			path = TLCollectionView;
 			sourceTree = "<group>";
 		};
 		8272E3441F000D3900EB1170 = {
@@ -172,8 +196,9 @@
 		8272E3641F000E2600EB1170 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				8272E3BC1F00125C00EB1170 /* Main */,
-				8272E3BD1F00126600EB1170 /* User */,
+				8272E3BC1F00125C00EB1170 /* MainViewController */,
+				8272E3BD1F00126600EB1170 /* UserViewController */,
+				82FE33701F06AF4A0081B5A0 /* TimelineViewController */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -218,8 +243,10 @@
 				8272E3771F000E2600EB1170 /* Date+Ext.swift */,
 				8272E3781F000E2600EB1170 /* String+Ext.swift */,
 				8272E3791F000E2600EB1170 /* UITableView+Ext.swift */,
+				82C989E81F06B80A0057D57D /* UICollectionView+Ext.swift */,
 				8272E37A1F000E2600EB1170 /* UIView+Ext.swift */,
 				8272E37B1F000E2600EB1170 /* UIViewController+Ext.swift */,
+				82AA34351F0AA4250020F076 /* Font+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -237,6 +264,7 @@
 		8272E3801F000E2600EB1170 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				823BD8F41F093AF800B147E3 /* TLCollectionView */,
 			);
 			path = Libraries;
 			sourceTree = "<group>";
@@ -267,6 +295,7 @@
 				8272E38D1F000E2600EB1170 /* OAuthHandler.swift */,
 				8272E38B1F000E2600EB1170 /* ApiClient.swift */,
 				8272E38C1F000E2600EB1170 /* AppRouter.swift */,
+				82D6389D1F0D2C11008E056E /* TimelineRouter.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -292,22 +321,22 @@
 			name = Storyboards;
 			sourceTree = "<group>";
 		};
-		8272E3BC1F00125C00EB1170 /* Main */ = {
+		8272E3BC1F00125C00EB1170 /* MainViewController */ = {
 			isa = PBXGroup;
 			children = (
 				8272E3651F000E2600EB1170 /* BaseViewController.swift */,
 				8272E3671F000E2600EB1170 /* MainTabBarController.swift */,
 				8272E3681F000E2600EB1170 /* StartViewController.swift */,
 			);
-			name = Main;
+			name = MainViewController;
 			sourceTree = "<group>";
 		};
-		8272E3BD1F00126600EB1170 /* User */ = {
+		8272E3BD1F00126600EB1170 /* UserViewController */ = {
 			isa = PBXGroup;
 			children = (
 				8272E3661F000E2600EB1170 /* LoginViewController.swift */,
 			);
-			name = User;
+			name = UserViewController;
 			sourceTree = "<group>";
 		};
 		8299AD9E1F00BC12009D7FE7 /* CustomViews */ = {
@@ -318,6 +347,14 @@
 				8299ADA11F00DCA6009D7FE7 /* LoginFormView.swift */,
 			);
 			name = CustomViews;
+			sourceTree = "<group>";
+		};
+		82FE33701F06AF4A0081B5A0 /* TimelineViewController */ = {
+			isa = PBXGroup;
+			children = (
+				82FE336E1F06AF230081B5A0 /* TimelineViewController.swift */,
+			);
+			name = TimelineViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -356,6 +393,7 @@
 				TargetAttributes = {
 					8272E34C1F000D3900EB1170 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = YKPTSP5NZL;
 						ProvisioningStyle = Manual;
 					};
 				};
@@ -466,12 +504,16 @@
 			files = (
 				8272E3AE1F000E2600EB1170 /* RUser.swift in Sources */,
 				8299AD9D1F00BC0B009D7FE7 /* CTView.swift in Sources */,
+				82AA34381F0AB40A0020F076 /* TLInfoView.swift in Sources */,
+				82D6389E1F0D2C11008E056E /* TimelineRouter.swift in Sources */,
 				8299ADA21F00DCA6009D7FE7 /* LoginFormView.swift in Sources */,
 				8272E39A1F000E2600EB1170 /* StartViewController.swift in Sources */,
 				8272E3AC1F000E2600EB1170 /* TransitionManager.swift in Sources */,
 				8272E3A31F000E2600EB1170 /* ViewDefine.swift in Sources */,
 				8272E3A91F000E2600EB1170 /* UIViewController+Ext.swift in Sources */,
 				8272E3B31F000E2600EB1170 /* AppRouter.swift in Sources */,
+				82AA34361F0AA4250020F076 /* Font+Ext.swift in Sources */,
+				823BD8F61F093B1900B147E3 /* TLCollectionView.swift in Sources */,
 				8272E39E1F000E2600EB1170 /* EnumDefine.swift in Sources */,
 				8272E3A71F000E2600EB1170 /* UITableView+Ext.swift in Sources */,
 				8272E3A61F000E2600EB1170 /* String+Ext.swift in Sources */,
@@ -479,16 +521,19 @@
 				8272E3A81F000E2600EB1170 /* UIView+Ext.swift in Sources */,
 				8272E3A21F000E2600EB1170 /* StructDefine.swift in Sources */,
 				8272E3981F000E2600EB1170 /* LoginViewController.swift in Sources */,
+				82FE336F1F06AF230081B5A0 /* TimelineViewController.swift in Sources */,
 				8272E3961F000E2600EB1170 /* AppDelegate.swift in Sources */,
 				8272E3A01F000E2600EB1170 /* Keys.swift in Sources */,
 				8272E39C1F000E2600EB1170 /* Config.swift in Sources */,
 				8272E3B41F000E2600EB1170 /* OAuthHandler.swift in Sources */,
 				8272E3AD1F000E2600EB1170 /* RStore.swift in Sources */,
 				8272E3AB1F000E2600EB1170 /* RealmManager.swift in Sources */,
+				82C989E91F06B80A0057D57D /* UICollectionView+Ext.swift in Sources */,
 				8272E39B1F000E2600EB1170 /* UserDao.swift in Sources */,
 				8272E3A11F000E2600EB1170 /* LocalizableString.swift in Sources */,
 				8272E3991F000E2600EB1170 /* MainTabBarController.swift in Sources */,
 				8272E3971F000E2600EB1170 /* BaseViewController.swift in Sources */,
+				823BD8F81F093B4A00B147E3 /* TLViews.swift in Sources */,
 				8272E3B21F000E2600EB1170 /* ApiClient.swift in Sources */,
 				8272E3AA1F000E2600EB1170 /* LocationManager.swift in Sources */,
 				8272E39D1F000E2600EB1170 /* Constants.swift in Sources */,
@@ -581,6 +626,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -600,7 +646,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -631,6 +677,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -644,7 +691,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -657,12 +704,15 @@
 			baseConfigurationReference = F1D478B4FCDD08DD37C262AD /* Pods-TravelWorld.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = YKPTSP5NZL;
 				INFOPLIST_FILE = TravelWorld/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = vn.thl.travelworld;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "a8cb5f38-56ad-488d-b01b-9cccfb765040";
+				PROVISIONING_PROFILE_SPECIFIER = WildcardAppMCBooks_Dev;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -672,12 +722,14 @@
 			baseConfigurationReference = 52E096099ACAF9A802D5B655 /* Pods-TravelWorld.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TravelWorld/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = vn.thl.travelworld;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = Wildcard_Dev;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

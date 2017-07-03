@@ -65,7 +65,7 @@ class LoginViewController: BaseViewController {
         Auth.auth().signIn(withEmail: "ltranframgia@gmail.com", password: "12345678") { (user, _) in
             if user != nil {
                 Auth.auth().currentUser?.getIDTokenForcingRefresh(true, completion: { (idToken, _ ) in
-
+                    _ = OAuthHandler(accessToken: idToken, refreshToken: Auth.auth().currentUser?.refreshToken)
                     logD("token: \(String(describing: idToken)) - refreshToken:  \(String(describing: Auth.auth().currentUser?.refreshToken))")
 
                     // main app
@@ -84,10 +84,10 @@ class LoginViewController: BaseViewController {
         if let loginFormView = self.loginFormView {
             loginFormView.hideWithAnimation(animate: true, completion: { (_) in
                 let indicatorView = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.white)
-                indicatorView.center = self.view.center
+                indicatorView.center = loginFormView.center
                 indicatorView.startAnimating()
-                self.view.addSubview(indicatorView)
-                // self.loginFirebase()
+                loginFormView.superview?.addSubview(indicatorView)
+                self.loginFirebase()
             })
         }
     }
