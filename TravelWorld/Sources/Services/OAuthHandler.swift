@@ -1,7 +1,10 @@
 import Alamofire
+import FirebaseAuth
 import SwiftyJSON
 
 class OAuthHandler: RequestAdapter, RequestRetrier {
+
+    private typealias RefreshCompletion = (_ succeeded: Bool, _ accessToken: String?, _ refreshToken: String?) -> Void
 
     private static let keyRefreshToken: String = "OAuth_Refresh_Token"
 
@@ -63,13 +66,6 @@ class OAuthHandler: RequestAdapter, RequestRetrier {
 
     private var requestsToRetry: [RequestRetryCompletion] = []
 
-    private let sessionManager: SessionManager = {
-        let configuration = URLSessionConfiguration.default
-        configuration.httpAdditionalHeaders = SessionManager.defaultHTTPHeaders
-
-        return SessionManager(configuration: configuration)
-    }()
-
     // MARK: - Initialization
     init(accessToken: String?, refreshToken: String? ) {
         self.accessToken = accessToken
@@ -80,23 +76,23 @@ class OAuthHandler: RequestAdapter, RequestRetrier {
         self.baseUrl = baseUrl
     }
 
-    func parse(jsonObject: AnyObject?) -> Bool {
-
-        guard let jsonData = jsonObject else { return false }
-
-        // using SwiftyJSON
-        let json = JSON(jsonData)
-
-        // parse
-        if let accessToken = json[JSONKey.accessToken].string,
-            let refreshToken = json[JSONKey.refreshToken].string {
-            self.accessToken = accessToken
-            self.refreshToken = refreshToken
-            return true
-        }
-
-        return false
-    }
+    //    func parse(jsonObject: AnyObject?) -> Bool {
+    //
+    //        guard let jsonData = jsonObject else { return false }
+    //
+    //        // using SwiftyJSON
+    //        let json = JSON(jsonData)
+    //
+    //        // parse
+    //        if let accessToken = json[JSONKey.accessToken].string,
+    //            let refreshToken = json[JSONKey.refreshToken].string {
+    //            self.accessToken = accessToken
+    //            self.refreshToken = refreshToken
+    //            return true
+    //        }
+    //
+    //        return false
+    //    }
 
     // MARK: - RequestAdapter
     func adapt(_ urlRequest: URLRequest) throws -> URLRequest {
@@ -127,7 +123,7 @@ class OAuthHandler: RequestAdapter, RequestRetrier {
             if !self.isRefreshing {
 
                 // refresh token
-                self.refreshTokens { [weak self] value in
+                self.refreshTokens { [weak self] (succeeded, accessToken, refreshToken ) in
                     guard let strongSelf = self else { return }
 
                     strongSelf.lock.lock()
@@ -136,9 +132,13 @@ class OAuthHandler: RequestAdapter, RequestRetrier {
                         strongSelf.lock.unlock()
                     }
 
-                    let success = strongSelf.parse(jsonObject: value)
+                    if let accessToken = accessToken,
+                        let refreshToken = refreshToken {
+                        strongSelf.accessToken = accessToken
+                        strongSelf.refreshToken = refreshToken
+                    }
 
-                    strongSelf.requestsToRetry.forEach { $0(success, 0.0) }
+                    strongSelf.requestsToRetry.forEach { $0(succeeded, 0.0) }
                     strongSelf.requestsToRetry.removeAll()
                 }
             }
@@ -148,26 +148,22 @@ class OAuthHandler: RequestAdapter, RequestRetrier {
     }
 
     // MARK: - Private - Refresh Tokens
-    private func refreshTokens(completion: @escaping (_ value: AnyObject?) -> Void) {
+    private func refreshTokens(completion: @escaping RefreshCompletion) {
         guard !isRefreshing else { return }
 
         self.isRefreshing = true
 
-        let urlString = "\(String(describing: self.baseUrl))/oauth2/token"
+        // refresh token
+        Auth.auth().currentUser?.getIDTokenForcingRefresh(true, completion: { [weak self] (idToken, _) in
+            guard let strongSelf = self else { return }
+            if let accessToken = idToken,
+                let refreshToken = Auth.auth().currentUser?.refreshToken {
+                completion(true, accessToken, refreshToken)
+            } else {
+                completion(false, nil, nil)
+            }
 
-        // create params
-        var parameters = Parameters()
-        parameters[ParamKey.accessToken] = self.accessToken
-        parameters[ParamKey.refreshToken] = self.refreshToken
-        parameters[ParamKey.clientId] = self.clientId
-        parameters[ParamKey.grantType] = "refresh_token"
-
-        // request
-        self.sessionManager.request(urlString, method: .post, parameters: parameters, encoding: JSONEncoding.default)
-            .responseJSON { [weak self] response in
-                guard let strongSelf = self else { return }
-                completion(response.result.value as AnyObject)
-                strongSelf.isRefreshing = false
-        }
+            strongSelf.isRefreshing = false
+        })
     }
 }

@@ -49,6 +49,11 @@ class StartViewController: BaseViewController {
 
             if responseObject?.result == .success {
                 self?.checkApp()
+            } else {
+                self?.showAlertWith(title: "Error", message: "Error Message", titleDefault: "Retry", handlerDefault: { [weak self] (_) in
+                    // again
+                    self?.doGetAppInfo()
+                })
             }
         }
     }

@@ -72,6 +72,9 @@ class LoginViewController: BaseViewController {
                     self.gotoMainApp()
                 })
 
+            } else {
+                self.showAlertWith(title: "Error", message: "Error Message", titleDefault: "Retry", handlerDefault: { (_) in
+                })
             }
 
         }
